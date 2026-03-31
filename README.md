@@ -341,7 +341,29 @@ curl -X POST "$BASE_URL/api/v1/auth/register" \
 - Add OpenAPI/Swagger docs.
 - Add integration tests for email transport and DLQ behavior.
 
-📧 Contact & Access
+## 📸 Screenshots
+
+### 1. Health Endpoint
+![Health Check](/health-endpoint.png)
+
+*Health check endpoint showing all services are UP and connected*
+
+### 2. Rate Limiting Test
+![Rate Limit](/rate-limit-test.png)
+
+*Rate limiting triggers 429 at request 51 (50 requests/60s window)*
+
+### 3. Async Email Queue
+![Email Received](/email-inbox.png)
+
+*Welcome email sent asynchronously via Resend API after tenant registration*
+
+### 4. Render Dashboard
+![Render Dashboard](/render-dashboard.png)
+
+*Live deployment on Render with successful health checks*
+
+### 📧 Contact & Access
 Interested in the source code or want a technical walkthrough?
 📧 Email: [lalithag2005@gmail.com]
 
