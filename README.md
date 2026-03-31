@@ -1,4 +1,4 @@
-# 🚀 SaaS Backend Platform - Portfolio Showcase
+# 🚀 SaaS Backend API - Portfolio Showcase
 
 > 🔒 **Source Code is Private.** Contact me for access or technical deep-dive.
 
@@ -7,10 +7,42 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://saas-backend-2sjw.onrender.com)
 
-A production-grade multi-tenant SaaS backend built with Java 21 and Spring Boot 4, featuring enterprise-level security, scalability, and compliance patterns.
+A production-grade multi-tenant SaaS backend API built with Java 21 and Spring Boot 4, featuring enterprise-level security, scalability, and compliance patterns.
 
 ---
 
+
+## ⚠️ Cold Start Notice
+
+When visiting the live demo for the first time (or after 15+ minutes of inactivity), you'll see a **"Service Waking Up"** page for **30-90 seconds**.
+
+### Why This Happens
+
+- **Render Free Tier** puts apps to sleep after 15 minutes of inactivity
+- First request triggers a "cold start" (allocating resources, starting container, booting Spring Boot)
+- This is **normal behavior** for free-tier deployments
+
+### What to Expect
+
+| Scenario | Response Time |
+| :--- | :--- |
+| **Cold Start** (first visit) | 30-90 seconds |
+| **Warm Request** (subsequent) | ~600ms |
+
+### During Cold Start
+
+You'll see:
+
+SERVICE WAKING UP ...
+ALLOCATING COMPUTE RESOURCES ...
+PREPARING INSTANCE FOR INITIALIZATION ...
+STARTING THE INSTANCE ...
+
+**Just wait 1-2 minutes** — the page will automatically refresh when ready!
+
+### Production Note
+
+In production with dedicated infrastructure or paid tiers, cold starts don't occur. This is purely a free-tier limitation.
 ## 🌐 Live Demo
 
 | Endpoint | URL | Status |
@@ -308,3 +340,9 @@ curl -X POST "$BASE_URL/api/v1/auth/register" \
 
 - Add OpenAPI/Swagger docs.
 - Add integration tests for email transport and DLQ behavior.
+
+📧 Contact & Access
+Interested in the source code or want a technical walkthrough?
+📧 Email: [lalithag2005@gmail.com]
+
+I'm open to discussing the implementation details, architecture decisions, and code structure in interviews.
